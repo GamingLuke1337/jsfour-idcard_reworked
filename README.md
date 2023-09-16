@@ -1,12 +1,12 @@
 jsfour-idcard reworked.
 
-**Was geändert worden ist:**
+## Was geändert worden ist
 - Personalausweis, Führerschein wurden ins Deutsche geändert
 - Krankenkassenkarte wurde hinzugefügt (um dies aufrufen zu können, sind Veränderungen im Personalmenü nötig)
 
 
 
-**Woran wir noch arbeiten**
+## Woran wir noch arbeiten
 
 - Waffenschein auf Deutsch skinnen
 - Texte etc. final anpassen
