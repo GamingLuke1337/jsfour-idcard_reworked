@@ -1,6 +1,4 @@
-local ESX = nil
--- ESX
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+local ESX = exports['es_extended']:getSharedObject()
 
 -- Open ID card
 RegisterServerEvent('jsfour-idcard:open')
