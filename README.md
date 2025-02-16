@@ -15,6 +15,8 @@ jsfour-idcard reworked.
 ## Anforderungen
 - [es_extended](https://github.com/esx-framework/esx_core)
 - [esx_license](https://github.com/esx-framework/esx_license)
+- [oxmysql](https://github.com/overextended/oxmysql)
+- [ox_lib](https://github.com/overextended/ox_lib)
 
 
 
