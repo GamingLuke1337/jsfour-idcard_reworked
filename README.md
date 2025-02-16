@@ -13,8 +13,8 @@ jsfour-idcard reworked.
 
 
 ## Anforderungen
-- <a href="https://github.com/ESX-Org/es_extended">es_extended</a>       
-- <a href="https://github.com/ESX-Org/esx_license">esx_license</a>
+- [es_extended](https://github.com/esx-framework/esx_core)
+- [esx_license](https://github.com/esx-framework/esx_license)
 
 
 
