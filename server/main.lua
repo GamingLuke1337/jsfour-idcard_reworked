@@ -15,7 +15,8 @@ elseif Config.framework == 'vrp' then
 elseif Config.framework == 'nd' then
     local NDCore = require "@ND_Core/init.lua" 
 elseif Config.framework == 'ox_core' then
-    local Ox = require '@ox_core.lib.init'
+        local Ox = require '@ox_core.lib.init'
+    end
 
 -- Open ID card
 RegisterServerEvent('jsfour-idcard:open')
