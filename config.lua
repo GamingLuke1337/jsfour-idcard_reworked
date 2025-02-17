@@ -2,7 +2,7 @@ Config = {}
 
 Config.framework = 'esx' -- 'esx', 'qbcore', 'qbx_core', 'vrp', 'nd', 'ox_core'
 
-Config.NewESX = true -- Set to true if you are using the new ESX (ESX Legacy) -- only for Config.framework = 'esx'
+Config.NewESX = 'true' -- Set to true if you are using the new ESX (ESX Legacy) -- only for Config.framework = 'esx'
 
 Config.NotifySystem = 'ox'  --  'esx', 'ox', 'custom'
 
