@@ -2,6 +2,11 @@ fx_version 'adamant'
 game 'gta5'
 version '1.0'
 
+author 'Re-Remastered by Gamingluke1337'
+description 'ID card system for FiveM'
+repository 'https://github.com/GamingLuke1337/jsfour-idcard_reworked/'
+
+
 ui_page 'html/index.html'
 
 server_script {
@@ -27,6 +32,5 @@ files {
 
 dependencies {
 	'oxmysql',
-	'es_extended',
-	'esx_license'
+	'ox_lib' -- uncomment if you dont want to use the update system
 }

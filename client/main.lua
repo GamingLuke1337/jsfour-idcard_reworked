@@ -1,6 +1,5 @@
 local open = false
 
--- Open ID card
 RegisterNetEvent('jsfour-idcard:open')
 AddEventHandler('jsfour-idcard:open', function( data, type )
 	open = true
@@ -11,7 +10,6 @@ AddEventHandler('jsfour-idcard:open', function( data, type )
 	})
 end)
 
--- Key events
 Citizen.CreateThread(function()
 	while true do
 		Wait(0)

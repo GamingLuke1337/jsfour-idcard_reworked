@@ -1,10 +1,46 @@
-local ESX = exports['es_extended']:getSharedObject()
+local ESX, QBCore, QBXCore, vRP, NDCore, OXCore
+
+if Config.framework == 'esx' then
+    if Config.NewESX then
+        ESX = exports['es_extended']:getSharedObject()
+    else
+        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+    end
+elseif Config.framework == 'qbcore' then
+    QBCore = exports['qb-core']:GetCoreObject()
+elseif Config.framework == 'qbx_core' then
+    QBXCore = exports['qb-core']:GetCoreObject()
+elseif Config.framework == 'vrp' then
+    vRP = Proxy.getInterface("vRP")
+elseif Config.framework == 'nd' then
+    local NDCore = require "@ND_Core/init.lua" 
+elseif Config.framework == 'ox_core' then
+    local Ox = require '@ox_core.lib.init'
 
 -- Open ID card
 RegisterServerEvent('jsfour-idcard:open')
 AddEventHandler('jsfour-idcard:open', function(ID, targetID, type)
-    local identifier = ESX.GetPlayerFromId(ID).identifier
-    local _source = ESX.GetPlayerFromId(targetID).source
+    local identifier, _source
+
+    if Config.framework == 'esx' then
+        identifier = ESX.GetPlayerFromId(ID).identifier
+        _source = ESX.GetPlayerFromId(targetID).source
+    elseif Config.framework == 'qbcore' then
+        identifier = QBCore.Functions.GetPlayer(ID).PlayerData.citizenid
+        _source = QBCore.Functions.GetPlayer(targetID).PlayerData.source
+    elseif Config.framework == 'qbx_core' then
+        identifier = QBXCore.Functions.GetPlayer(ID).PlayerData.citizenid
+        _source = QBXCore.Functions.GetPlayer(targetID).PlayerData.source
+    elseif Config.framework == 'vrp' then
+        identifier = vRP.getUserId({ID})
+        _source = vRP.getUserSource({targetID})
+    elseif Config.framework == 'nd' then
+        identifier = NDCore.Functions.GetPlayer(ID).citizenid
+        _source = NDCore.Functions.GetPlayer(targetID).source
+    elseif Config.framework == 'ox_core' then
+        identifier = Ox.GetPlayer(ID).identifier
+        _source = Ox.GetPlayer(targetID).source
+    end
 
     if not identifier then return end
 
@@ -34,7 +70,7 @@ AddEventHandler('jsfour-idcard:open', function(ID, targetID, type)
                 if show then
                     TriggerClientEvent('jsfour-idcard:open', _source, { user = user, licenses = licenses }, type)
                 else
-                    SendNotify(_source, "Du hast keine Lizenzen.")
+                    SendNotify(_source, Config.NoLicenses or "Du hast keine Lizenzen.")
                 end
             end)
         end
