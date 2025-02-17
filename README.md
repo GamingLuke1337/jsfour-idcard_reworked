@@ -1,5 +1,7 @@
 # jsfour-idcard Re-Remastered by Gamingluke1337
 
+# Meldet euch bei Fragen an gamingluke1337 auf Discord!
+
 ## Änderungen
 - Personalausweis und Führerschein wurden ins Deutsche übersetzt.
 - Update Check hinzugefügt
