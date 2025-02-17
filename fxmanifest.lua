@@ -1,6 +1,7 @@
 fx_version 'adamant'
 game 'gta5'
 version '1.0'
+lua54 'yes'
 
 author 'Re-Remastered by Gamingluke1337'
 description 'ID card system for FiveM'
