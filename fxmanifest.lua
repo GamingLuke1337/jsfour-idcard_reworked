@@ -12,6 +12,7 @@ ui_page 'html/index.html'
 
 server_script {
 	'@oxmysql/lib/MySQL.lua',
+	'server/update.lua',
 	'server/main.lua'
 }
 
