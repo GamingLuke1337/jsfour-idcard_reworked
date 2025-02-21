@@ -12,7 +12,6 @@ ui_page 'html/index.html'
 
 server_script {
 	'@oxmysql/lib/MySQL.lua',
-	'@ox_lib/init.lua', -- uncomment if you dont want to use the update system (also set Config.Update to false in the config.lua)
 	'server/main.lua'
 }
 
