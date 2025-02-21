@@ -1,5 +1,2 @@
-CreateThread(function()
-    if Config.Update then
-        lib.versionCheck('GamingLuke1337/jsfour-idcard_reworked')
-    end
-end)
+if not Config.Update then return end
+lib.versionCheck('GamingLuke1337/jsfour-idcard_reworked')
